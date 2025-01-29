@@ -6,6 +6,14 @@ import useScrollTriggeredCountUp from "@/lib/use-counter";
 const MetricSection = () => {
     const ref = useRef(null);
 
+    // Example data
+    // const items = [
+    //     { value: 10, description: "Farmers Foot fall" },
+    //     { value: 400, description: "Stalls" },
+    //     { value: 41, description: "Exhibition Space(Indoor & Outdoor)" },
+    //     { value: 100, description: "Residue Free Live Demo Plots" },
+    // ];
+
     return (
         <div ref={ref} className="bg-white py-20 font-ins">
             <div className="mx-auto max-w-[90%] px-0">
@@ -42,7 +50,84 @@ const MetricSection = () => {
                 </motion.div>
 
                 <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-                    {items.map((item, index) => (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-2 text-center"
+                    >
+                        <motion.div
+                            className="font-cambo text-5xl md:text-7xl"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                        >
+                            {useScrollTriggeredCountUp(ref, 10)}
+                            L+
+                        </motion.div>
+                        <p className="mx-auto text-lg text-neutral-700">
+                            Farmers Foot fall
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-2 text-center"
+                    >
+                        <motion.div
+                            className="font-cambo text-5xl md:text-7xl"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                        >
+                            {useScrollTriggeredCountUp(ref, 400)}+
+                        </motion.div>
+                        <p className="mx-auto text-lg text-neutral-700">
+                            Stalls
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-2 text-center"
+                    >
+                        <motion.div
+                            className="font-cambo text-5xl md:text-7xl"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                        >
+                            {useScrollTriggeredCountUp(ref, 41)}k
+                            <span className="ml-3 text-2xl">sqm</span>
+                        </motion.div>
+                        <p className="mx-auto text-lg text-neutral-700">
+                            Exhibition Space(Indoor & Outdoor)
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-2 text-center"
+                    >
+                        <motion.div
+                            className="font-cambo text-5xl md:text-7xl"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                        >
+                            {useScrollTriggeredCountUp(ref, 100)}+
+                        </motion.div>
+                        <p className="mx-auto text-lg text-neutral-700">
+                            Residue Free Live Demo Plots
+                        </p>
+                    </motion.div>
+                    {/* {items.map((item, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
@@ -69,7 +154,7 @@ const MetricSection = () => {
                                 {item.description}
                             </p>
                         </motion.div>
-                    ))}
+                    ))} */}
                 </div>
             </div>
         </div>
@@ -77,22 +162,3 @@ const MetricSection = () => {
 };
 
 export default MetricSection;
-
-const items = [
-    {
-        value: 10,
-        description: "Farmers Foot fall",
-    },
-    {
-        value: 400,
-        description: "Stalls",
-    },
-    {
-        value: 41,
-        description: "Exhibition Space(Indoor & Outdoor)",
-    },
-    {
-        value: 100,
-        description: "Residue Free Live Demo Plots",
-    },
-];

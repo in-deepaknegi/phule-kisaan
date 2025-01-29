@@ -6,7 +6,6 @@ import {
     RiYoutubeFill,
 } from "@remixicon/react";
 import Image from "next/image";
-import Link from "next/link";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
@@ -143,13 +142,6 @@ const Footer = () => {
                         <div className="">
                             <p className="text-center text-gray-600">
                                 Phule Kisaan© 2025 All Rights Reserved.
-                                Designed by{" "}
-                                <Link
-                                    href="#"
-                                    className="text-teal-600 hover:underline"
-                                >
-                                    Infotech Brains
-                                </Link>
                             </p>
                         </div>
                     </div>

@@ -15,7 +15,7 @@ const useScrollTriggeredCountUp = (
     const totalFrames = Math.round(duration / frameRate);
 
     const handleScroll = useCallback(
-        ([entry]: any) => {
+        ([entry]: IntersectionObserverEntry[]) => {
             if (entry.isIntersecting && !isCounting.current) {
                 isCounting.current = true;
                 let frame = 0;
