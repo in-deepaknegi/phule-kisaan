@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "motion/react";
+import useScrollTriggeredCountUp from "@/lib/use-counter";
 
 function MetricSection() {
+    const ref = useRef(null);
+
     return (
-        <div className="bg-white py-20 font-ins">
+        <div ref={ref} className="bg-white py-20 font-ins">
             <div className="mx-auto max-w-[90%] px-0">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -12,8 +15,8 @@ function MetricSection() {
                     transition={{ duration: 0.6 }}
                     className="mb-16 space-y-6 text-center"
                 >
-                    <h3 className="tracking-wide text-primary flex items-center justify-center gap-2 uppercase">
-                        <span className="h-[1px] font-medium w-16 bg-teal-600" />
+                    <h3 className="flex items-center justify-center gap-2 uppercase tracking-wide text-primary">
+                        <span className="h-[1px] w-16 bg-teal-600 font-medium" />
                         OUR ACHIEVEMENTS
                         <span className="h-[1px] w-16 bg-teal-600" />
                     </h3>
@@ -21,9 +24,10 @@ function MetricSection() {
                         What we do speaks for what we&apos;ve achieved
                     </h2>
                     <p className="mx-auto max-w-2xl text-lg text-neutral-700">
-                        With a passionate team and years of dedication, we&apos;ve
-                        touched the lives of countless children, offering them
-                        hope, knowledge, and a path to a brighter future.
+                        With a passionate team and years of dedication,
+                        we&apos;ve touched the lives of countless children,
+                        offering them hope, knowledge, and a path to a brighter
+                        future.
                     </p>
                     <motion.button
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -52,7 +56,14 @@ function MetricSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1.5 }}
                             >
-                                {item.value}
+                                {useScrollTriggeredCountUp(ref, item.value)}
+                                {(index === 0 && "L+") ||
+                                    (index === 1 && "+") ||
+                                    (index === 2 && "K") ||
+                                    (index === 3 && "+")}
+                                <span className="ml-2 text-2xl">
+                                    {index === 2 && "sqm"}
+                                </span>
                             </motion.div>
                             <p className="mx-auto text-lg text-neutral-700">
                                 {item.description}
@@ -69,19 +80,19 @@ export default MetricSection;
 
 const items = [
     {
-        value: "64k",
-        description: "Children helped in poverty with food and medicine",
+        value: 10,
+        description: "Farmers Foot fall",
     },
     {
-        value: "56",
-        description: "Different campaigns around the world",
+        value: 400,
+        description: "Stalls",
     },
     {
-        value: "128",
-        description: "Volunteers who work extremely hard every week",
+        value: 41,
+        description: "Exhibition Space(Indoor & Outdoor)",
     },
     {
-        value: "$1.2M",
-        description: "Raised to help the children in need",
+        value: 100,
+        description: "Residue Free Live Demo Plots",
     },
 ];
