@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { motion } from "motion/react";
 import useScrollTriggeredCountUp from "@/lib/use-counter";
 
-function MetricSection() {
+const MetricSection = () => {
     const ref = useRef(null);
 
     return (
@@ -74,7 +74,7 @@ function MetricSection() {
             </div>
         </div>
     );
-}
+};
 
 export default MetricSection;
 

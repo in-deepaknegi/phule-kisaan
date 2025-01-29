@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 function SupporSection() {
     return (
         <div className="bg-white py-20 font-ins">
-            <div className="mx-auto md:max-w-[88%] px-10 md:px-0">
+            <div className="mx-auto px-10 md:max-w-[88%] md:px-0">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -26,16 +26,16 @@ function SupporSection() {
                     </p>
                 </motion.div>
 
-                <div className="flex flex-col md:flex-row items-start justify-center md:gap-20">
+                <div className="flex flex-col items-start justify-center md:flex-row md:gap-20">
                     <ul className="list-disc space-y-2 text-neutral-800">
-                        {items.slice(0, 19).map((item, i) => (
+                        {items.slice(0, 19).map((item) => (
                             <li key={item.id} className="">
                                 {item.name}
                             </li>
                         ))}
                     </ul>
                     <ul className="list-disc space-y-2 text-neutral-800">
-                        {items.slice(20, 37).map((item, i) => (
+                        {items.slice(20, 37).map((item) => (
                             <li key={item.id} className="">
                                 {item.name}
                             </li>
