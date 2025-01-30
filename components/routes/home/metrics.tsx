@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion } from "motion/react";
 import useScrollTriggeredCountUp from "@/lib/use-counter";
+import Image from "next/image";
 
 const MetricSection = () => {
     const ref = useRef(null);
@@ -56,6 +57,16 @@ const MetricSection = () => {
                         transition={{ duration: 0.8 }}
                         className="space-y-2 text-center"
                     >
+                        <div className="mx-auto w-fit rounded-full bg-teal-700 p-4">
+                            <Image
+                                src="/images/ilustrations/i8.png"
+                                alt="Farmers Foot fall"
+                                width={1080}
+                                height={680}
+                                className="size-12"
+                            />
+                        </div>
+
                         <motion.div
                             className="font-cambo text-5xl md:text-7xl"
                             initial={{ opacity: 0 }}
@@ -76,6 +87,16 @@ const MetricSection = () => {
                         transition={{ duration: 0.8 }}
                         className="space-y-2 text-center"
                     >
+                        <div className="mx-auto w-fit rounded-full bg-teal-700 p-4">
+                            <Image
+                                src="/images/ilustrations/i7.png"
+                                alt="Farmers Foot fall"
+                                width={1080}
+                                height={680}
+                                className="size-12"
+                            />
+                        </div>
+
                         <motion.div
                             className="font-cambo text-5xl md:text-7xl"
                             initial={{ opacity: 0 }}
@@ -95,6 +116,16 @@ const MetricSection = () => {
                         transition={{ duration: 0.8 }}
                         className="space-y-2 text-center"
                     >
+                        <div className="mx-auto w-fit rounded-full bg-teal-700 p-4">
+                            <Image
+                                src="/images/ilustrations/i9.png"
+                                alt="Farmers Foot fall"
+                                width={1080}
+                                height={680}
+                                className="size-12"
+                            />
+                        </div>
+
                         <motion.div
                             className="font-cambo text-5xl md:text-7xl"
                             initial={{ opacity: 0 }}
@@ -115,6 +146,16 @@ const MetricSection = () => {
                         transition={{ duration: 0.8 }}
                         className="space-y-2 text-center"
                     >
+                        <div className="mx-auto w-fit rounded-full bg-teal-700 p-4">
+                            <Image
+                                src="/images/ilustrations/i10.png"
+                                alt="Farmers Foot fall"
+                                width={1080}
+                                height={680}
+                                className="size-12"
+                            />
+                        </div>
+
                         <motion.div
                             className="font-cambo text-5xl md:text-7xl"
                             initial={{ opacity: 0 }}

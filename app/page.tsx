@@ -1,6 +1,6 @@
 import AboutSection from "@/components/routes/home/about";
 import FeatureSection from "@/components/routes/home/features";
-import HeroSection from "@/components/routes/home/hero";
+import { CarouselPlugin } from "@/components/routes/home/main";
 import MetricSection from "@/components/routes/home/metrics";
 import SupporSection from "@/components/routes/home/support";
 import CtaSection from "@/components/shared/cta";
@@ -11,11 +11,11 @@ export default function Home() {
     return (
         <>
             <Header />
-            <HeroSection />
+            <CarouselPlugin />
             <AboutSection />
             <MetricSection />
             <FeatureSection />
-            <SupporSection/>
+            <SupporSection />
             <CtaSection />
             <Footer />
         </>
