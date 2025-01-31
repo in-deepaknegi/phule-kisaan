@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useIsMobile } from "./use-mobile";
 
 const easeOutExpo = (t: number) => {
     return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
@@ -13,7 +14,7 @@ const useScrollTriggeredCountUp = (
     const isCounting = useRef(false);
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
-
+    const isMobile = useIsMobile();
     const handleScroll = useCallback(
         ([entry]: IntersectionObserverEntry[]) => {
             if (entry.isIntersecting && !isCounting.current) {
@@ -40,8 +41,8 @@ const useScrollTriggeredCountUp = (
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleScroll, {
-            threshold: 0.7,
-        });
+            threshold: isMobile ? 0.7 : 0.1,
+        }); 
         const currentRef = ref.current;
 
         if (currentRef) {

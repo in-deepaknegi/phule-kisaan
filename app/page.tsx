@@ -6,6 +6,7 @@ import SupporSection from "@/components/routes/home/support";
 import CtaSection from "@/components/shared/cta";
 import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
+import SocialSection from "@/components/shared/social";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
             <FeatureSection />
             <SupporSection />
             <CtaSection />
+            <SocialSection/>
             <Footer />
         </>
     );
