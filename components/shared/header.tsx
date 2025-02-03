@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { scrollToSection } from "@/lib/utils";
+import { motion } from "motion/react";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -24,22 +25,29 @@ const Header = () => {
     }, []);
 
     return (
-        <header
+        <motion.header
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 1,
+            }}
             className={`sticky top-0 z-50 font-inter ${isScrolled ? "bg-white" : ""} transition-all duration-300 ease-in`}
         >
-            <div className="mx-auto px-5 md:px-0 md:max-w-[85%]">
+            <div className="mx-auto px-5 md:max-w-[85%] md:px-0">
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 font-cambo ">
+                    <div className="flex items-center gap-2 font-cambo">
                         <Image
                             src="/images/logo-01.png"
                             alt="logo"
-                            width={1080}
-                            height={780}
+                            width={680}
+                            height={170}
                             className="size-16 md:size-20"
                         />
-                        <span className="text-2xl font-ins font-semibold hidden md:block">Phule Kisaan</span>
+                        <span className="hidden font-ins text-2xl font-semibold md:block">
+                            Phule Kisaan
+                        </span>
                     </div>
-                    <nav className="w-fit hidden md:block rounded-full bg-white/60 px-5 py-3 backdrop-blur-md">
+                    <nav className="hidden w-fit rounded-full bg-white/60 px-5 py-3 backdrop-blur-md md:block">
                         <ul className="flex gap-12">
                             <li>
                                 <a href="#">Home</a>
@@ -56,15 +64,16 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div>
-                        <button 
-                            onClick={()=> scrollToSection("cta")}
-                        className="rounded-lg border-2 px-4 py-2 text-sm md:text-base">
+                        <button
+                            onClick={() => scrollToSection("cta")}
+                            className="rounded-lg border-2 px-4 py-2 text-sm md:text-base"
+                        >
                             Book Now
                         </button>
                     </div>
                 </div>
             </div>
-        </header>
+        </motion.header>
     );
 };
 

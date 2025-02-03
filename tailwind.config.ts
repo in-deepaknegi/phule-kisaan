@@ -23,8 +23,6 @@ export default {
         },
         fontFamily: {
             ins: ["Instrument Sans", "serif"],
-            mont: ["Montserrat", "serif"],
-            pop: ["Poppins", "serif"],
             cambo: ["Cambo", "serif"],
             inter: ["Inter", "serif"],
         },

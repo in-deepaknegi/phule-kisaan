@@ -4,31 +4,25 @@ import React from "react";
 const icons = [
     {
         image: {
-            src: "/images/ilustrations/l1.jpg",
+            src: "/images/ilustrations/l1.png",
             alt: "l1",
         },
     },
     {
         image: {
-            src: "/images/ilustrations/l2.jpg",
+            src: "/images/ilustrations/l2.png",
             alt: "l1",
         },
     },
     {
         image: {
-            src: "/images/ilustrations/l3.jpg",
+            src: "/images/ilustrations/l3.png",
             alt: "l1",
         },
     },
     {
         image: {
-            src: "/images/ilustrations/l4.jpg",
-            alt: "l1",
-        },
-    },
-    {
-        image: {
-            src: "/images/ilustrations/l5.jpg",
+            src: "/images/ilustrations/l4.png",
             alt: "l1",
         },
     },
@@ -36,9 +30,9 @@ const icons = [
 
 const SocialSection = () => {
     return (
-        <section className="relative isolate py-0">
-            <div className="mx-auto max-w-full px-5 md:px-0 md:max-w-[80%]">
-                <div className="grid grid-cols-3 gap-5 md:grid-cols-5 items-center md:gap-10">
+        <section className="relative isolate pt-0 pb-10 md:pb-24">
+            <div className="mx-auto max-w-full px-5 md:max-w-[70%] md:px-0">
+                <div className="grid grid-cols-4">
                     {icons.map((icon, index) => (
                         <div
                             key={index}
@@ -48,9 +42,9 @@ const SocialSection = () => {
                                 src={icon.image.src}
                                 alt={icon.image.alt}
                                 loading="lazy"
-                                width={1080}
-                                height={680}
-                                className="w-24 md:w-36"
+                                width={1920}
+                                height={1080}
+                                className="w-24 md:w-32"
                             />
                         </div>
                     ))}

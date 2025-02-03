@@ -6,6 +6,7 @@ import {
     RiYoutubeFill,
 } from "@remixicon/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
@@ -98,7 +99,6 @@ const Footer = () => {
                                 )}
                             </div>
                         </div>
-
                     </div>
 
                     <div className="mt-12 flex flex-col items-center justify-between gap-5 md:flex-row md:gap-0">
@@ -139,15 +139,14 @@ const Footer = () => {
                                 className="hidden size-20 rounded-full object-cover md:block"
                             />
                         </div>
-                        <div className="">
-                            <p className="text-center text-gray-600">
+                        <div className="flex gap-3 divide-x-2 divide-gray-600 text-gray-600 font-ins">
+                            <p className="text-center">
                                 Phule Kisaan© 2025 All Rights Reserved.
                             </p>
+                            <div className="pl-3">
+                                Designed by <Link href='http://www.forrealstudios.in/'  target="_blank" className="text-teal-800 hover:underline font-medium">ForReal Studios</Link>
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        {/* <Globe className="-right-40 -bottom-40" /> */}
                     </div>
                 </div>
             </footer>

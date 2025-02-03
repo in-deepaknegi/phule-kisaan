@@ -42,7 +42,7 @@ const useScrollTriggeredCountUp = (
     useEffect(() => {
         const observer = new IntersectionObserver(handleScroll, {
             threshold: isMobile ? 0.7 : 0.1,
-        }); 
+        });
         const currentRef = ref.current;
 
         if (currentRef) {
@@ -54,7 +54,7 @@ const useScrollTriggeredCountUp = (
                 observer.unobserve(currentRef);
             }
         };
-    }, [handleScroll, ref]);
+    }, [handleScroll, isMobile, ref]);
 
     return count;
 };
