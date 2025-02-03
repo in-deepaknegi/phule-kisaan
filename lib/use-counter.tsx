@@ -15,6 +15,7 @@ const useScrollTriggeredCountUp = (
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
     const isMobile = useIsMobile();
+
     const handleScroll = useCallback(
         ([entry]: IntersectionObserverEntry[]) => {
             if (entry.isIntersecting && !isCounting.current) {
@@ -54,7 +55,7 @@ const useScrollTriggeredCountUp = (
                 observer.unobserve(currentRef);
             }
         };
-    }, [handleScroll, isMobile, ref]);
+    }, [handleScroll, ref]);
 
     return count;
 };
