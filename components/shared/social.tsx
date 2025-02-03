@@ -44,7 +44,7 @@ const SocialSection = () => {
                                 loading="lazy"
                                 width={1920}
                                 height={1080}
-                                className="w-24 md:w-32"
+                                className="w-16 md:w-32"
                             />
                         </div>
                     ))}

@@ -139,12 +139,19 @@ const Footer = () => {
                                 className="hidden size-20 rounded-full object-cover md:block"
                             />
                         </div>
-                        <div className="flex gap-3 divide-x-2 divide-gray-600 text-gray-600 font-ins">
+                        <div className="flex flex-col items-center justify-center gap-1.5 divide-gray-600 font-ins text-gray-600 md:flex-row md:gap-3 md:divide-x-2">
                             <p className="text-center">
                                 Phule Kisaan© 2025 All Rights Reserved.
                             </p>
                             <div className="pl-3">
-                                Designed by <Link href='http://www.forrealstudios.in/'  target="_blank" className="text-teal-800 hover:underline font-medium">ForReal Studios</Link>
+                                Designed by{" "}
+                                <Link
+                                    href="http://www.forrealstudios.in/"
+                                    target="_blank"
+                                    className="font-medium text-teal-800 hover:underline"
+                                >
+                                    ForReal Studios
+                                </Link>
                             </div>
                         </div>
                     </div>
