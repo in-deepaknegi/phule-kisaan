@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CtaSection = () => {
@@ -28,7 +29,7 @@ const CtaSection = () => {
 
                     <div className="mt-8">
                         <button className="transform rounded-lg bg-white px-8 py-3 font-semibold text-emerald-800 shadow-lg transition-all duration-200 hover:scale-105 hover:bg-emerald-50 active:scale-95">
-                            Book Now
+                            <Link href="/registration">Book Now</Link>
                         </button>
                     </div>
                 </div>

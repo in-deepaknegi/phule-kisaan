@@ -8,6 +8,7 @@ import {
     RiTwitterFill,
     RiYoutubeFill,
 } from "@remixicon/react";
+import Link from "next/link";
 
 const HeroSection = () => {
     return (
@@ -43,8 +44,8 @@ const HeroSection = () => {
                             transition={{ delay: 0.4 }}
                             className="mb-6 font-cambo text-5xl text-yellow-400 md:text-[5rem]"
                         >
-                            India&apos;s First Residue Free Live Demonstration And
-                            National Level Exhibition
+                            India&apos;s First Residue Free Live Demonstration
+                            And National Level Exhibition
                         </motion.h1>
 
                         <motion.p
@@ -57,7 +58,7 @@ const HeroSection = () => {
                             Shivajinagar, Pune 411-005
                         </motion.p>
 
-                        <motion.button
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.8 }}
@@ -65,8 +66,10 @@ const HeroSection = () => {
                             whileTap={{ scale: 0.95 }}
                             className="rounded-lg bg-tertiary px-5 py-3 text-white transition-colors hover:bg-teal-800"
                         >
-                            Book your stall now
-                        </motion.button>
+                            <Link href="/registration">
+                                Book your stall now
+                            </Link>
+                        </motion.div>
                     </div>
 
                     <div className="absolute bottom-10 right-3 flex flex-col gap-4 md:right-10 md:top-1/2">

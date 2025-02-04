@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { scrollToSection } from "@/lib/utils";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,10 @@ const Header = () => {
         >
             <div className="mx-auto px-5 md:max-w-[85%] md:px-0">
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 font-cambo">
+                    <Link
+                        href="/"
+                        className="flex items-center gap-2 font-cambo"
+                    >
                         <Image
                             src="/images/logo-01.png"
                             alt="logo"
@@ -46,7 +50,7 @@ const Header = () => {
                         <span className="hidden font-ins text-2xl font-semibold md:block">
                             Phule Kisaan
                         </span>
-                    </div>
+                    </Link>
                     <nav className="hidden w-fit rounded-full bg-white/60 px-5 py-3 backdrop-blur-md md:block">
                         <ul className="flex gap-12">
                             <li>
@@ -64,12 +68,12 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div>
-                        <button
-                            onClick={() => scrollToSection("cta")}
+                        <Link
+                            href="/registration"
                             className="rounded-lg border-2 px-4 py-2 text-sm md:text-base"
                         >
                             Book Now
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -17,6 +17,7 @@ import {
     RiYoutubeFill,
 } from "@remixicon/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const images = [
     {
@@ -120,16 +121,18 @@ export function CarouselPlugin() {
                                 Shivajinagar, Pune 411-005
                             </motion.p>
 
-                            <motion.button
+                            <motion.div
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 1 }}
+                                transition={{ delay: 0.8 }}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="rounded-lg bg-tertiary px-5 py-3 text-white transition-colors hover:bg-teal-800"
+                                className="rounded-lg bg-tertiary w-fit px-5 py-3 text-white transition-colors hover:bg-teal-800"
                             >
-                                Book your stall now
-                            </motion.button>
+                                <Link href="/registration">
+                                    Book your stall now
+                                </Link>
+                            </motion.div>
                         </div>
 
                         <div className="absolute bottom-5 right-3 flex flex-col gap-2 md:right-10 md:top-1/2 md:gap-4">
